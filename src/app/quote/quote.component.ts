@@ -14,6 +14,9 @@ export class QuoteComponent implements OnInit {
    new Quote(4,'quote4','Submitted by:')
     
   ];
+  toggleDetails(index:number){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit(): void {
