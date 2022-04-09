@@ -8,10 +8,10 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] =[
-    {id:1, name:'quote1'},
-    {id:2, name:'quote2'},
-    {id:3, name:'quote3'},
-    {id:4, name:'quote4'}
+    {id:1, name:'quote1',description:'Submitted by:'},
+    {id:2, name:'quote2',description:'Submitted by:'},
+    {id:3, name:'quote3',description:'Submitted by:'},
+    {id:4, name:'quote4',description:'Submitted by:'}
   ];
   constructor() { }
 
