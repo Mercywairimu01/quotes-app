@@ -2,5 +2,6 @@
     <h1>My Quotes</h1>
     <ul *ngFor="let quote of quotes">
     {{quote.name}}
+    <app-quote-details [quotes]="quote"></app-quote-details>
     </ul>
   </div>
