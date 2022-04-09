@@ -8,10 +8,10 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] =[
-   new Quote(1,'quote1','Submitted by:'),
-   new Quote(2,'quote2','Submitted by:'),
-   new Quote(3,'quote3','Submitted by:'),
-   new Quote(4,'quote4','Submitted by:')
+   new Quote(1,'quote1','Submitted by:',new Date(2022,4,6)),
+   new Quote(2,'quote2','Submitted by:',new Date(2022,5,6)),
+   new Quote(3,'quote3','Submitted by:',new Date(2022,6,6)),
+   new Quote(4,'quote4','Submitted by:',new Date(2022,2,6))
     
   ];
   toggleDetails(index:number){
