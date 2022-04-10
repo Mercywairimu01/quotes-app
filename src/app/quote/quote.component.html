@@ -1,21 +1,24 @@
+<div class="container">
+  <div class="row">
 <h1 class="mt-5 text-center bg-info">My Quotes</h1>
 <hr>
 <ul>
   <div class="container" >
  <div class ="row justify-content-around" >
-  <div class="col-5"*ngFor='let quote of quotes;let i = index'>
-    <div *ngIf="quote.upvotes == most && quote.upvotes>0;then highlight else note"></div>
+  <div class="col-7"*ngFor='let quote of quotes;let i = index'>
+
+    <div *ngIf="most == quote.upvotes && quote.upvotes>0;then highlight else note"></div>
     <ng-template #highlight> 
       <div  appHighlight>
       <li class="que">{{quote.quote}} </li>
       <li class="quo"><strong>{{quote.author}}</strong> </li>
-     
+    
     </div>
     </ng-template>
     <ng-template #note>
       <div>
     <li class="que" >{{quote.quote}} </li>
-    <li class="quo"><strong>{{quote.author}}</strong> </li>
+    <li class="quo">Author:<strong>{{quote.author}}</strong> </li>
     </div>
     
   </ng-template>
@@ -25,11 +28,10 @@
   </div>
   </div>
 </ul>
-<!-- <div>
-    <h1>M</h1>
-    <hr>
-    <ul *ngFor="let s">
-    {{quote.name}}
-    <app-quote-details *ngIf="quote.showDescription" [quotes]="quote"></app-quote-details>
-    </ul>
-  </div> -->
+
+
+    <div class="col">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+  </div>
+</div>

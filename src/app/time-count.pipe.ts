@@ -5,10 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimeCountPipe implements PipeTransform {
 
-  transform(value: any): number {
-    // getting current date
+   transform(value: any): number {
+   
 
-    let currentDate = new Date();
+    let currentDate = new Date();  // getting current date
 
     //getting the difference in current time and time the quote was added
     // getting the difference in miliseconds
@@ -24,5 +24,6 @@ export class TimeCountPipe implements PipeTransform {
 
     return Math.round(dateDifference)-1;
   }
+ 
 
 }
