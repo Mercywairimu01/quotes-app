@@ -22,7 +22,7 @@ export class TimeCountPipe implements PipeTransform {
 
     //Rounding up a number to the next largest integer
 
-    return Math.ceil(dateDifference)-1;
+    return Math.round(dateDifference)-1;
   }
 
 }

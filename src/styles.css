@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.quote{
+    background-color: aqua;
+}
+/* .container{
+    background-color:white;
+} */
+.row{
+    background-color:white;
+    list-style: none;
+    border: 1px solid rgb(15, 15, 15);
+    padding: 4%;
+    margin-top: 30px;
+    border-radius: 50px 50px 50px 50px;
+    
+}

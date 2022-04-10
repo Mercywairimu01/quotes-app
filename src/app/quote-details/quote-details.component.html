@@ -1,2 +1,5 @@
 <p>{{quotes.description}}</p>
-<button (click) = 'quotesComplete(true)'>Delete</button>
+<i class="fa-light fa-thumbs-up"></i>
+<p>-- on {{quotes.completeDate |date}} ({{quotes.completeDate |timeCount}}day(s) ago </p>
+<p><span  class="text-success">{{quotes.upvotes}} <img src="https://p.kindpng.com/picc/s/35-356912_10-like-thanks-pogchamp-agree-disagree-thumbs-up.png" alt="" width="2%"></span>  <span class="text-danger ml-3">{{quotes.downvotes}} <img src ="https://e7.pngegg.com/pngimages/1015/544/png-clipart-thumb-signal-red-thumbs-down-hand-presentation-thumbnail.png" alt="thumbsdown img" width="2%"></span></p>
+<button (click) = 'quotesDelete(true)'>Delete</button>
