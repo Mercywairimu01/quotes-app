@@ -15,12 +15,12 @@ export class QuoteDetailsComponent implements OnInit {
   }
   
 
-   upVote(){
+   upVote(i: any){
     this.quotes.upvotes++;    //increases upvotes
 }
 
 
-downVote(){
+downVote(i: any){
     this.quotes.downvotes++;    //increases downvotes
 
 }

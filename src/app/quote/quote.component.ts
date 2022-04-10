@@ -13,14 +13,25 @@ export class QuoteComponent implements OnInit {
    new Quote(4,'Life has no CTRL+Z','Alpha M',"",'Beta',new Date(2022,3,6),0,0)
     
   ];
+  // upper! =number:
+  // low! =number;
+  // count ! = number
   array:number[]= this.quotes.map(
     function(quote){
       return quote.upvotes
     }
   )
-  most = Math.max(...this.array)
+  most =Math.max(...this.array)
   
-
+// most() {
+//   this.upper = 0;
+//   this.low = 0
+//   for (this.count =0 ;this.count < this.quotes.length;this.count++){
+//     this.low = this.quotes[this.count].upvotes;
+//     if (this.low> this.upper){this.upper = this.low}
+//   }
+//   return this.upper
+// }
 
 
   toggleDetails(index:number){
