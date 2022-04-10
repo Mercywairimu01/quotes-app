@@ -5,12 +5,16 @@
 /* .container{
     background-color:white;
 } */
-.row{
+.col-5{
     background-color:white;
     list-style: none;
     border: 1px solid rgb(15, 15, 15);
-    padding: 4%;
+    padding: 1%;
     margin-top: 30px;
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 10px 10px 10px 10px;
     
 }
+
+/* button .btn text-danger{
+   width: 1%;
+} */

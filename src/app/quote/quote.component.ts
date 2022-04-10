@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Quote } from '../quote';
-
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -26,12 +25,22 @@ export class QuoteComponent implements OnInit {
     }
     }
   }
+  // upVote(){
+  //   this.quotes.upvotes++;    //increases upvotes
+  // }
+  
+  
+  // downVote(){
+  //   this.quotes.downvotes++;    //increases downvotes
+  
+  // }
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
 function author(arg0: string): string {
   throw new Error('Function not implemented.');
 }

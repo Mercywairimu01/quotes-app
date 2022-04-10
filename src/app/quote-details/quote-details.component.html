@@ -1,5 +1,17 @@
 <p>{{quotes.description}}</p>
 <i class="fa-light fa-thumbs-up"></i>
-<p>-- on {{quotes.completeDate |date}} ({{quotes.completeDate |timeCount}}day(s) ago </p>
-<p><span  class="text-success">{{quotes.upvotes}} <img src="https://p.kindpng.com/picc/s/35-356912_10-like-thanks-pogchamp-agree-disagree-thumbs-up.png" alt="" width="2%"></span>  <span class="text-danger ml-3">{{quotes.downvotes}} <img src ="https://e7.pngegg.com/pngimages/1015/544/png-clipart-thumb-signal-red-thumbs-down-hand-presentation-thumbnail.png" alt="thumbsdown img" width="2%"></span></p>
+<p>-- on {{quotes.completeDate |date}} ({{quotes.completeDate |timeCount}}day(s) ago) </p>
+ <div class="d-grid gap-2 d-md-block">
+ <button class="btn text-success" (click)="upVote()">{{quotes.upvotes}}
+    <img src="https://raw.githubusercontent.com/Mercywairimu01/quotes-app/main/src/assets/thumbsup.png" alt="thumbsup img" width="20px">
+</button>
+<span> <button class="btn text-danger btn-sm" id="btn1" (click)="downVote()" >{{quotes.downvotes}}
+    <img src ="https://raw.githubusercontent.com/Mercywairimu01/quotes-app/main/src/assets/thumbsdown.png" alt="thumbsdown img" width="20px" >
+</button></span>
+</div>
 <button (click) = 'quotesDelete(true)'>Delete</button>
+
+
+
+
+<!-- <p><span  class="text-success">{{quotes.upvotes}} <img src="https://raw.githubusercontent.com/Mercywairimu01/quotes-app/main/src/assets/thumbsup.png" alt="" width="2%"></span>  <span class="text-danger ml-3">{{quotes.downvotes}} <img src ="https://raw.githubusercontent.com/Mercywairimu01/quotes-app/main/src/assets/thumbsdown.png" alt="thumbsdown img" width="2.5%"></span></p> -->
