@@ -14,6 +14,12 @@
     border-radius: 10px 10px 10px 10px;
     
 }
+b{
+    margin-left: 200px;
+}
+b:hover{
+    cursor: pointer;
+}
 
 /* button .btn text-danger{
    width: 1%;

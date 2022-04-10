@@ -13,6 +13,12 @@ export class QuoteComponent implements OnInit {
    new Quote(4,'Life has no CTRL+Z','Mercy Alpha','Submitted by:',new Date(2022,3,6),0,0)
     
   ];
+  array:number[]= this.quotes.map(
+    function(quote){
+      return quote.upvotes
+    }
+  )
+  most = Math.max(...this.array)
   toggleDetails(index:number){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
@@ -25,15 +31,7 @@ export class QuoteComponent implements OnInit {
     }
     }
   }
-  // upVote(){
-  //   this.quotes.upvotes++;    //increases upvotes
-  // }
   
-  
-  // downVote(){
-  //   this.quotes.downvotes++;    //increases downvotes
-  
-  // }
   constructor() { }
 
   ngOnInit(): void {

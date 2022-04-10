@@ -3,18 +3,23 @@
 <ul>
   <div class="container" >
  <div class ="row justify-content-around" >
-  <div class="col-5" *ngFor='let quote of quotes;let i = index'>
-    <li class="que">{{quote.quote}} </li>
+  <div class="col-5"*ngFor='let quote of quotes;let i = index'>
+    <div *ngIf="quote.upvotes == most && quote.upvotes>0;then highlight else note"></div>
+    <ng-template #highlight> 
+      <div  appHighlight>
+      <li class="que">{{quote.quote}} </li>
+      <li class="quo"><strong>{{quote.author}}</strong> </li>
+     
+    </div>
+    </ng-template>
+    <ng-template #note>
+      <div>
+    <li class="que" >{{quote.quote}} </li>
     <li class="quo"><strong>{{quote.author}}</strong> </li>
-    <!-- <div class="d-grid gap-2 d-md-block">
-      <button class="btn text-success" (click)="upVote()">{{quotes.upvotes}}
-         <img src="https://raw.githubusercontent.com/Mercywairimu01/quotes-app/main/src/assets/thumbsup.png" alt="thumbsup img" width="20px">
-     </button>
-     <span> <button class="btn text-danger btn-sm" id="btn1" (click)="downVote()" >{{quotes.downvotes}}
-         <img src ="https://raw.githubusercontent.com/Mercywairimu01/quotes-app/main/src/assets/thumbsdown.png" alt="thumbsdown img" width="20px" >
-     </button></span>
-     </div> -->
-    <button style="width: 120px;" (click)='toggleDetails(i)'>See More</button>
+    </div>
+    
+  </ng-template>
+  <b style="color: rgb(79, 100, 177);" (click)='toggleDetails(i)'>See More</b>
     <app-quote-details *ngIf='quote.showDescription' [quotes]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
   </div>
   </div>
