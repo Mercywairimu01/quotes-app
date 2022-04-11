@@ -3,10 +3,10 @@
 <p>Submitted by:{{quotes.writer}}</p>
 <p>-- on {{quotes.completeDate |date}} ({{quotes.completeDate |timeCount}}day(s) ago) </p>
  <div class="d-grid gap-2 d-md-block">
- <button class="btn text-success" (click)="upVote(0)">{{quotes.upvotes}}
+ <button class="btn text-success" (click)="upVote()">{{quotes.upvotes}}
     <img src="https://raw.githubusercontent.com/Mercywairimu01/quotes-app/main/src/assets/thumbsup.png" alt="thumbsup img" width="20px">
 </button>
-<span> <button class="btn text-danger btn-sm" id="btn1" (click)="downVote(0)" >{{quotes.downvotes}}
+<span> <button class="btn text-danger btn-sm" id="btn1" (click)="downVote()" >{{quotes.downvotes}}
     <img src ="https://raw.githubusercontent.com/Mercywairimu01/quotes-app/main/src/assets/thumbsdown.png" alt="thumbsdown img" width="20px" >
 </button></span>
 </div>

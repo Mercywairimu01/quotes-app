@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
+    height: 91vh;
 
 }
 
@@ -14,8 +15,10 @@
     padding: 1%;
     margin-top: 30px;
     border-radius: 10px 10px 10px 10px;
+   
 }  
 .que {
+    
     text-align: center;
     font-size: larger;
     font-weight: bold;
@@ -24,7 +27,7 @@
     text-align: center; 
 }
 b{
-   margin-left: 300px;
+   margin-left: 200px;
 }
 b:hover{
     cursor: pointer;
@@ -33,4 +36,8 @@ b:hover{
 /* .fluid{
     float: right;
 } */
-
+.icons{
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.773);
+}

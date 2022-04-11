@@ -7,7 +7,7 @@ export class TimeCountPipe implements PipeTransform {
 
    transform(value: any): number {
    
-
+   
     let currentDate = new Date();  // getting current date
 
     //getting the difference in current time and time the quote was added
@@ -22,7 +22,7 @@ export class TimeCountPipe implements PipeTransform {
 
     //Rounding up a number to the next largest integer
 
-    return Math.round(dateDifference)-1;
+    return Math.ceil(dateDifference)-1;
   }
  
 
