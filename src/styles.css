@@ -1,10 +1,12 @@
-
+#wow{
+    background-color:rgba(98,203,241,0.4) ;
+}
 .quote{
     background-image: url('../src/assets/photo-1553095066-5014bc7b7f2d.jpeg');
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
-    height: 91vh;
+    /* height: 91vh; */
 
 }
 

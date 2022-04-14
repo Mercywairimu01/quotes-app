@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row  ">
-<h1 class="mt-5 text-center bg-info">Famous Quotes of all time!</h1>
+  <div class="row  " id="wow">
+<h1 class="mt-5 text-center">Famous Quotes of all time!</h1>
 <hr>
 <ul>
   <!-- <div class="container" > -->
@@ -8,7 +8,7 @@
   <div>
     <div class="col"*ngFor='let quote of quotes;let i = index' id="colu"  >
 
-    <div *ngIf="most == quote.upvotes && quote.upvotes>0;then highlight else note"></div>
+    <div *ngIf="most == quote.id && quote.id>1;then highlight else note"></div>
     <ng-template #highlight> 
       <div  appHighlight>
       <li class="que">{{quote.quote}} </li>
